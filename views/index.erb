@@ -12,8 +12,15 @@
   <body>
     <p><%= word %></p>
     <form>
-  		<input type='text' name='guess' />
+  		<input type='text' name='name' value="<%= @name %>" />
   		<input type='submit' value='Guess!' />
 	</form>
+
+  <ul>
+    <% @names.each do |name| %>
+      <li><%= name %></li>
+    <% end %>
+  <ul>
+
   </body>
 </html>

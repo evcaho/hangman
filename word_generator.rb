@@ -1,5 +1,3 @@
-require 'sinatra'
-
  class Hangmanword
 	 def initialize
 		@array = make_array
@@ -24,10 +22,4 @@ require 'sinatra'
 	def secret_word
 		valid_words.sample
 	end
-end
-
-get '/' do
- 	hangman = Hangmanword.new()
- 	word = hangman.secret_word
-	erb :index, :locals => {:word => word}
 end
